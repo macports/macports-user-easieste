@@ -58,7 +58,7 @@ post-patch {
         ${worksrcpath}/doc/makefile
 }
 
-configure { 
+platform darwin { 
     global slime_emacs_binary
     global slime_site_lisp_dest
     global slime_site_lisp_contrib
@@ -86,7 +86,7 @@ configure {
        ui_msg "Couldn't find an executable Emacs image so won't byte compile."
    } else {
        set slime_byte_compile_p 1
-       ui_msg "Emacs binary used for byte compilation is ${slime_emacs_binary}"
+       ui_msg "Emacs binary used for byte compilation is ${slime_emacs_binary}."
    }
 }
             
